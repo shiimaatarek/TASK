@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteNow Poll</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5 p-4 shadow-lg rounded" id="pollContainer">
+        <!-- Logo and title -->
+        <div class="d-flex align-items-center mb-4">
+            <div class="logo-container">
+                <div class="logo-text">F</div>
+                <div class="logo-text">U</div>
+                <div class="logo-text">R</div>
+                <div class="logo-text">N</div>
+            </div>
+            <div class="text-center w-100">
+                <h1 class="text-primary mb-4">VoteNow Poll <i class="fas fa-poll"></i></h1>
+            </div>
+        </div>
+
+        <div class="poll-options text-center">
+            <button class="btn btn-success option-btn my-2" id="option1Btn" onclick="vote('option1')">
+                <i class="fas fa-thumbs-up"></i> Option 1
+            </button>
+            <button class="btn btn-primary option-btn my-2" id="option2Btn" onclick="vote('option2')">
+                <i class="fas fa-thumbs-up"></i> Option 2
+            </button>
+            <button class="btn btn-danger option-btn my-2" id="option3Btn" onclick="vote('option3')">
+                <i class="fas fa-thumbs-up"></i> Option 3
+            </button>
+        </div>
+        <div class="vote-counts mt-4 text-center">
+            <p><strong>Option 1:</strong> <span id="count1">0</span> votes</p>
+            <p><strong>Option 2:</strong> <span id="count2">0</span> votes</p>
+            <p><strong>Option 3:</strong> <span id="count3">0</span> votes</p>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-danger btn-lg" onclick="submitVote()">Submit Vote <i class="fas fa-check"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
